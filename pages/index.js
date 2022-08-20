@@ -6,7 +6,7 @@ import LoginPage from '../components/LoginPage';
 import Student from '../components/Student/Student';
 
 export default function Home() {
-  const [login, setLogin] = useState(true);
+  const [login, setLogin] = useState(false);
 
   if (!login) {
     return (
