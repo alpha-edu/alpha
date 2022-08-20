@@ -1,6 +1,6 @@
 {
-    "name": "Next.js PWA",
-    "short_name": "Next PWA",
+    "name": "alpha",
+    "short_name": "alpha",
     "icons": [
       {
         "src": "/icon.png",
