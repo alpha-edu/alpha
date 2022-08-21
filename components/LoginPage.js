@@ -1,7 +1,8 @@
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import LoginStudent from "../utils/LoginStudent";
 import LoginTeacher from "../utils/LoginTeacher";
-
+import logo from './../public/logo.svg'
 export default function LoginPage({ setLoginState }) {
 
   const [user, setUser] = useState("student");
@@ -22,44 +23,50 @@ export default function LoginPage({ setLoginState }) {
     console.log(form.current.email.value)
     console.log(form.current.password.value)
 
-    if (user === "student") {
-      const response = await LoginStudent(form.current.email.value, form.current.password.value)
-      try {
-        if (result.tokenState === true) {
-          localStorage.setItem("userToken", result.token);
-          localStorage.setItem("email", result.email);
-          console.log(result)
-          window.location.reload();
-        }
-      }
-      catch (e) {
-        console.log(e)
-      }
-    }
-    else if (user === "teacher") {
-      const response = await LoginTeacher(form.current.email.value, form.current.password.value)
-      try {
-        if (result.tokenState === true) {
-          localStorage.setItem("userToken", result.token);
-          localStorage.setItem("email", result.email);
-          console.log(result)
-          window.location.reload();
-        }
-      }
-      catch (e) {
-        console.log(e)
-      }
-    }
+    // if (user === "student") {
+    //   const response = await LoginStudent(form.current.email.value, form.current.password.value)
+    //   try {
+    //     if (result.tokenState === true) {
+    //       localStorage.setItem("userToken", result.token);
+    //       localStorage.setItem("email", result.email);
+    //       console.log(result)
+    //       window.location.reload();
+    //     }
+    //   }
+    //   catch (e) {
+    //     console.log(e)
+    //   }
+    // }
+    // else if (user === "teacher") {
+    //   const response = await LoginTeacher(form.current.email.value, form.current.password.value)
+    //   try {
+    //     if (result.tokenState === true) {
+    //       localStorage.setItem("userToken", result.token);
+    //       localStorage.setItem("email", result.email);
+    //       console.log(result)
+    //       window.location.reload();
+    //     }
+    //   }
+    //   catch (e) {
+    //     console.log(e)
+    //   }
+    // }
 
     localStorage.setItem("LOGINSTATE", true)
+    window.location.reload();
 
 
   }
   return (
     <main className="flex flex-col items-center justify-center bg-white w-full h-full md:w-[50rem]">
-      <div className="flex flex-col items-center rounded-lg overflow-hidden shadow-lg justify-center bg-blue-new bg-opacity-5 w-[80%] ">
-        <h2 className="my-4 text-center text-3xl font-extrabold text-brown">
-          Welcome!!
+      <div className="flex flex-col items-center rounded-lg overflow-hidden shadow-lg justify-center bg-blue-new bg-opacity-5 w-[80%] pt-8">
+        <Image
+          src={logo}
+          width={"120rem"}
+          height={"120rem"}
+        />
+        <h2 className="mb-4 mt-8 text-center text-3xl font-extrabold text-brown">
+          Welcome!! <br />Login to start journey
         </h2>
 
         <div className=" my-4 w-2/3 h-12 flex justify-between items-stretch border border-gray-500 bg-white rounded-xl">

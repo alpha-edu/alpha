@@ -26,6 +26,7 @@ export default function Teacher() {
             case 'home': return <TeacherHome navH={navh} />;
             case 'scan': return<Attendance navH={navh}/>;
             case 'notification': return<Announcement navH={navh}/>;
+            case 'account': return<Account navH={navh} />;
         }
 
     }

@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import Account from './Account';
 import BottomNav from './BottomNav';
 import StudentHome from './Home';
 import MarkAttendance from './MarkAttandance';
@@ -26,6 +27,7 @@ export default function Student() {
             case 'home': return <StudentHome navH={navh} />;
             case 'timeTable': return<TimeTable navH={navh}/>;
             case 'scan': return<MarkAttendance navH={navh} />;
+            case 'account': return<Account navH={navh} />;
         }
 
     }
