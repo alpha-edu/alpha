@@ -64,6 +64,7 @@ export default function LoginPage({ setLoginState }) {
           src={logo}
           width={"120rem"}
           height={"120rem"}
+          alt={"LOGO"}
         />
         <h2 className="mb-4 mt-8 text-center text-3xl font-extrabold text-brown">
           Welcome!! <br />Login to start journey
