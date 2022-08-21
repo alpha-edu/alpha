@@ -1,4 +1,6 @@
 import { useEffect, useRef, useState } from "react";
+import LoginStudent from "../utils/LoginStudent";
+import LoginTeacher from "../utils/LoginTeacher";
 
 export default function LoginPage({ setLoginState }) {
 
@@ -11,7 +13,7 @@ export default function LoginPage({ setLoginState }) {
 
   const form = useRef(null);
 
-  const handelSubmit = (e) => {
+  const handelSubmit = async (e) => {
 
     e.preventDefault()
 
@@ -20,7 +22,36 @@ export default function LoginPage({ setLoginState }) {
     console.log(form.current.email.value)
     console.log(form.current.password.value)
 
-    setLoginState(true)
+    if (user === "student") {
+      const response = await LoginStudent(form.current.email.value, form.current.password.value)
+      try {
+        if (result.tokenState === true) {
+          localStorage.setItem("userToken", result.token);
+          localStorage.setItem("email", result.email);
+          console.log(result)
+          window.location.reload();
+        }
+      }
+      catch (e) {
+        console.log(e)
+      }
+    }
+    else if (user === "teacher") {
+      const response = await LoginTeacher(form.current.email.value, form.current.password.value)
+      try {
+        if (result.tokenState === true) {
+          localStorage.setItem("userToken", result.token);
+          localStorage.setItem("email", result.email);
+          console.log(result)
+          window.location.reload();
+        }
+      }
+      catch (e) {
+        console.log(e)
+      }
+    }
+
+
   }
   return (
     <main className="flex flex-col items-center justify-center bg-white w-full h-full md:w-[50rem]">

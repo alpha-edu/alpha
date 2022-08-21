@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import Announcement from './Announcement';
 import Attendance from './Attendance';
 import BottomNav from './BottomNav';
 import TeacherHome from './Home';
@@ -23,10 +24,8 @@ export default function Teacher() {
     const component = (crs) => {
         switch (crs) {
             case 'home': return <TeacherHome navH={navh} />;
-            case 'scan': return<Attendance navH={navh} setCurrentState={setCurrentState}/>;
-            // case 'notification': return<Issue navH={navh} setCurrentState={setCurrentState}/>;
-            // case 'account': return <Account />
-            // default: return<Home navH={navh}/>;
+            case 'scan': return<Attendance navH={navh}/>;
+            case 'notification': return<Announcement navH={navh}/>;
         }
 
     }

@@ -26,8 +26,6 @@ export default function Student() {
             case 'home': return <StudentHome navH={navh} />;
             case 'timeTable': return<TimeTable navH={navh}/>;
             case 'scan': return<MarkAttendance navH={navh} />;
-            // case 'account': return <Account />
-            // default: return<Home navH={navh}/>;
         }
 
     }

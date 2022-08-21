@@ -37,7 +37,7 @@ export default function MarkAttendance({ navH }) {
             <div className='flex justify-center'>
                 <button 
                 className='bg-royal-blue bg-opacity-80 hover:bg-opacity-100 rounded-md w-1/3 p-3 text-white font-semibold my-4'
-                onClick={() => alert(qrData)}
+                onClick={() => alert("attendance marked for "+ qrData)}
                 >
                     Submit
                 </button>
