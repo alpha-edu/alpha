@@ -4,6 +4,7 @@ import Image from 'next/image'
 import React, { useState } from 'react';
 import LoginPage from '../components/LoginPage';
 import Student from '../components/Student/Student';
+import Teacher from '../components/Teacher/Teacher';
 
 export default function Home() {
   const [login, setLogin] = useState(false);
