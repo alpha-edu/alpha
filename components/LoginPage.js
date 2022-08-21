@@ -53,7 +53,8 @@ export default function LoginPage({ setLoginState }) {
     // }
 
     localStorage.setItem("LOGINSTATE", true)
-    window.location.reload();
+    setLoginState(true)
+    // window.location.reload();
 
 
   }

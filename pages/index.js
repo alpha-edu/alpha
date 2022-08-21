@@ -1,25 +1,12 @@
 import Head from 'next/head'
 import Image from 'next/image'
 
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import LoginPage from '../components/LoginPage';
 import Student from '../components/Student/Student';
-import Teacher from '../components/Teacher/Teacher';
 
 export default function Home() {
   const [login, setLogin] = useState(false);
-
-  useEffect(() => {
-    const val = localStorage.getItem("LOGINSTATE");
-    console.log(val);
-    if (val !== null && val !== 'undefined' && val !== '' && val !== "false") {
-      setLogin(true)
-      sessionStorage.clear()
-    }
-    else {
-      setLogin(false)
-    }
-  }, []);
 
   if (!login) {
     return (
