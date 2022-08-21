@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import BottomNav from './BottomNav';
+import StudentHome from './Home';
 
 export default function Student() {
 
@@ -17,10 +18,10 @@ export default function Student() {
 
     const [currentState, setCurrentState] = useState('home')
 
-    console.log(currentState)
+    console.log(navh)
     const component = (crs) => {
         switch (crs) {
-            // case 'home': return<Home navH={navh}/>;
+            case 'home': return <StudentHome navH={navh} />;
             // case 'carbon': return<Carbon navH={navh} setCurrentState={setCurrentState}/>;
             // case 'issue': return<Issue navH={navh} setCurrentState={setCurrentState}/>;
             // case 'account': return <Account />
@@ -31,6 +32,9 @@ export default function Student() {
 
     return (
         <>
+            {
+                component(currentState)
+            }
             <BottomNav reference={n} currentState={currentState} setCurrentState={setCurrentState} />
         </>
     )

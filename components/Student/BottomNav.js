@@ -2,7 +2,7 @@ import React from 'react';
 import {GrHomeRounded, GrCalendar, GrQr, GrNotification, GrUser} from 'react-icons/gr'
 export default function BottomNav({ reference, currentState, setCurrentState }) {
     return(
-        <nav ref={reference} className='absolute bottom-0 left-1/2 translate-x-[-50%] bg-white md:max-w-[50rem] w-full h-16 py-1 grid grid-cols-5 items-center justify-center shadow-lg rounded-xl'>
+        <nav ref={reference} className='absolute bottom-0 left-1/2 translate-x-[-50%] bg-blue-new bg-opacity-5 md:max-w-[50rem] w-full h-16 py-1 grid grid-cols-5 items-center justify-center shadow-xl rounded-3xl'>
             <div onClick={() => setCurrentState('home')} className='h-full text-[0.5rem] md:text-xs text-center'>
                 {
                     currentState === 'home' ?

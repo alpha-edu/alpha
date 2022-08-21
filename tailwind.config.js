@@ -18,6 +18,7 @@ module.exports = {
         'b-grey': '#FAFAFA',
         'blue-new': '#0000A3',
         'royal-blue': '#004197',
+        'cream-blue': '#006DFF',
         'orchid': '#7F3E71',
         'rose-red': '#DF265E',
       }
