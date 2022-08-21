@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import Account from './Account';
 import Announcement from './Announcement';
 import Attendance from './Attendance';
 import BottomNav from './BottomNav';
