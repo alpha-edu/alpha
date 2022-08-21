@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-export default function LoginPage({setLoginState}) {
+export default function LoginPage({ setLoginState }) {
 
   const [user, setUser] = useState("student");
 
@@ -46,7 +46,7 @@ export default function LoginPage({setLoginState}) {
           </button>
         </div>
 
-        <form ref={form} onSubmit={handelSubmit} className=" my-4 flex flex-col px-8 mt-4 w-[70%] items-center">
+        <form ref={form} onSubmit={handelSubmit} className=" my-4 flex flex-col px-8 mt-4 md:w-[70%] w-full items-center">
           <label className="my-2 flex flex-col justify-between w-full">
             <span className="font-light text-sm text-gray-600">Email</span>
             <input
@@ -78,7 +78,8 @@ export default function LoginPage({setLoginState}) {
           <input
             type="submit"
             value="LOGIN"
-            className='bg-royal-blue bg-opacity-80 hover:bg-opacity-100 rounded-md w-full p-3 text-white font-semibold my-4' />
+            className='bg-royal-blue bg-opacity-80 hover:bg-opacity-100 rounded-md w-full p-3 text-white font-semibold my-4'
+          />
 
         </form>
       </div>

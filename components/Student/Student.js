@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import BottomNav from './BottomNav';
 import StudentHome from './Home';
+import MarkAttendance from './MarkAttandance';
+import TimeTable from './TimeTable';
 
 export default function Student() {
 
@@ -22,8 +24,8 @@ export default function Student() {
     const component = (crs) => {
         switch (crs) {
             case 'home': return <StudentHome navH={navh} />;
-            // case 'carbon': return<Carbon navH={navh} setCurrentState={setCurrentState}/>;
-            // case 'issue': return<Issue navH={navh} setCurrentState={setCurrentState}/>;
+            case 'timeTable': return<TimeTable navH={navh}/>;
+            case 'scan': return<MarkAttendance navH={navh} />;
             // case 'account': return <Account />
             // default: return<Home navH={navh}/>;
         }
