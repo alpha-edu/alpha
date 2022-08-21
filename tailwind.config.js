@@ -15,6 +15,12 @@ module.exports = {
         "bright-purple": "#cc9cd7",
         "blue-smoke": "#698780",
         "pink-dirty": "#bfb1a8",
+        'b-grey': '#FAFAFA',
+        'blue-new': '#0000A3',
+        'royal-blue': '#004197',
+        'cream-blue': '#006DFF',
+        'orchid': '#7F3E71',
+        'rose-red': '#DF265E',
       }
     },
   },
