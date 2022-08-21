@@ -4,6 +4,7 @@ import Image from 'next/image'
 import React, { useState } from 'react';
 import LoginPage from '../components/LoginPage';
 import Student from '../components/Student/Student';
+import Teacher from '../components/Teacher/Teacher';
 
 export default function Home() {
   const [login, setLogin] = useState(false);
@@ -26,7 +27,7 @@ export default function Home() {
 
   const afterLoginComponent = () => {
     if (localStorage.getItem("userType") === 'student') return <Student />
-    else if (localStorage.getItem("userType") === 'teacher') return null
+    else if (localStorage.getItem("userType") === 'teacher') return <Teacher />
 
   }
   if (login) {
